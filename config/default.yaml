@@ -1,0 +1,28 @@
+data:
+  file_path: Main/s1/S1_E1_A1.mat
+  window_size: 50
+  max_samples: 5000
+  channels: [0, 1]
+  step_size: 50
+
+training:
+  episodes: 500
+  batch_size: 64
+  learning_rate: 0.001
+  gamma: 0.995
+  epsilon_start: 1.0
+  epsilon_decay: 0.995
+  epsilon_min: 0.01
+  buffer_capacity: 10000
+  target_update_interval: 10
+  seed: 42
+  device: cpu
+
+model:
+  conv1_channels: 32
+  conv2_channels: 64
+  hidden_dim: 128
+
+output:
+  directory: outputs
+  save_checkpoint: true
